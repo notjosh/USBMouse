@@ -11,6 +11,9 @@
 		421474E31D10FEE000F0E941 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421474E21D10FEE000F0E941 /* ViewController.swift */; };
 		421474E51D10FEE000F0E941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 421474E41D10FEE000F0E941 /* Assets.xcassets */; };
 		421474E81D10FEE000F0E941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421474E61D10FEE000F0E941 /* Main.storyboard */; };
+		421474F21D11288C00F0E941 /* USBMouseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421474F11D11288C00F0E941 /* USBMouseController.swift */; };
+		42E7BAA71D114E7B00DD6006 /* USBMouseIOController.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E7BAA51D114E7B00DD6006 /* USBMouseIOController.c */; };
+		42E7BAAA1D11717E00DD6006 /* USBDeviceHandler.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E7BAA81D11717E00DD6006 /* USBDeviceHandler.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,12 @@
 		421474E41D10FEE000F0E941 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		421474E71D10FEE000F0E941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		421474E91D10FEE000F0E941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		421474F11D11288C00F0E941 /* USBMouseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USBMouseController.swift; sourceTree = "<group>"; };
+		42E7BAA41D114E7B00DD6006 /* USBMouse-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "USBMouse-Bridging-Header.h"; sourceTree = "<group>"; };
+		42E7BAA51D114E7B00DD6006 /* USBMouseIOController.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = USBMouseIOController.c; sourceTree = "<group>"; };
+		42E7BAA61D114E7B00DD6006 /* USBMouseIOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBMouseIOController.h; sourceTree = "<group>"; };
+		42E7BAA81D11717E00DD6006 /* USBDeviceHandler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = USBDeviceHandler.c; sourceTree = "<group>"; };
+		42E7BAA91D11717E00DD6006 /* USBDeviceHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBDeviceHandler.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,12 @@
 			children = (
 				421474E01D10FEE000F0E941 /* AppDelegate.swift */,
 				421474E21D10FEE000F0E941 /* ViewController.swift */,
+				421474F11D11288C00F0E941 /* USBMouseController.swift */,
+				42E7BAA51D114E7B00DD6006 /* USBMouseIOController.c */,
+				42E7BAA61D114E7B00DD6006 /* USBMouseIOController.h */,
+				42E7BAA41D114E7B00DD6006 /* USBMouse-Bridging-Header.h */,
+				42E7BAA81D11717E00DD6006 /* USBDeviceHandler.c */,
+				42E7BAA91D11717E00DD6006 /* USBDeviceHandler.h */,
 				421474E41D10FEE000F0E941 /* Assets.xcassets */,
 				421474E61D10FEE000F0E941 /* Main.storyboard */,
 				421474E91D10FEE000F0E941 /* Info.plist */,
@@ -95,6 +110,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = J8GZ9347Y3;
 						DevelopmentTeamName = "Joshua May";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -134,8 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E7BAAA1D11717E00DD6006 /* USBDeviceHandler.c in Sources */,
 				421474E31D10FEE000F0E941 /* ViewController.swift in Sources */,
 				421474E11D10FEE000F0E941 /* AppDelegate.swift in Sources */,
+				42E7BAA71D114E7B00DD6006 /* USBMouseIOController.c in Sources */,
+				421474F21D11288C00F0E941 /* USBMouseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,11 +262,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = USBMouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.notjosh.USBMouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "USBMouse/USBMouse-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -256,11 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = USBMouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.notjosh.USBMouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "USBMouse/USBMouse-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -284,6 +308,7 @@
 				421474EE1D10FEE000F0E941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
