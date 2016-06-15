@@ -3,11 +3,13 @@ USB Mouse
 
 So you're at your mother's house, poking around, and you find a USB mouse on her desk. It's not any ordinary USB mouse, it's a literal mouse (albeit plastic) on an exercise bike.
 
-![USB mouse](http://hi.notjo.sh/0Z2H0n0j092L/IMG_6325.JPG)
+![USB mouse](http://hi.notjo.sh/3J3u1k2B3T1h/IMG_1572.JPG)
 
 You find the driver CD, but realise it only supports Windows while all you have is macOS. You realise she has a Windows machine, but upon installation you find out the last supported version is Windows XP, and, well, we're a little past that at this point.
 
 The only thing left to do is...reverse the communications protocol, and implement the driver yourself.
+
+(For one reason or another, this is important to me.)
 
 Bit of Background
 =================
@@ -29,6 +31,13 @@ Some other multimedia assets:
  - [Feels](http://hi.notjo.sh/2p0f1Q2J1U2K) (image)
  - [Shell](http://hi.notjo.sh/3i020s262m3C) (image)
  - [Pedalling action](http://hi.notjo.sh/2s442Y402b2E) (video (vertical, sorry))
+
+Application
+===========
+
+I'll trust you to figure this out!
+
+![Application screenshot](http://hi.notjo.sh/161x2E0c1T36/Screen%20Shot%202016-06-16%20at%2012.10.00%20am.png)
 
 Protocol
 ========
